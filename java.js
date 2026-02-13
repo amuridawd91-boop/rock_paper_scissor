@@ -34,3 +34,21 @@ if (humanChoice === computerChoice) {
 }  
 
 }
+
+function playGame(){
+    humanScore = 0;
+    computerScore = 0;
+    for (i=1;i<=5;i++){
+        console.log("Round " + i);
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection)
+    console.log("Human Score;" + humanScore, "Computer Score; " + computerScore );
+    }
+    if (humanScore > computerScore){
+        console.log("Congratulations you won the game!!");
+    } else {
+        console.log("Sorry you lost the game.")
+    }
+}
+playGame()
