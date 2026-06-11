@@ -22,16 +22,6 @@ scissorButton.id = 'scissor';
 scissorButton.textContent = 'Scissor';
 buttonContainer.appendChild(scissorButton);
 
-rockButton.addEventListener("click", () => {
-    playRound("rock", getComputerChoice)
-});
-paperButton.addEventListener("click", () => {
-    playRound("paper", getComputerChoice)
-});
-scissorButton.addEventListener("click", () => {
-    playRound("scissor", getComputerChoice)
-});
-
 
 const resultsContainer = document.createElement('div');
 resultsContainer.id = 'results-container';
@@ -114,3 +104,13 @@ function ultimateWinner() {
         finalWinner.textContent = "Sorry you lost the game. Try Again!"
     }
 }
+
+rockButton.addEventListener("click", () => {
+    playRound("rock", getComputerChoice)
+});
+paperButton.addEventListener("click", () => {
+    playRound("paper", getComputerChoice)
+});
+scissorButton.addEventListener("click", () => {
+    playRound("scissor", getComputerChoice)
+});
