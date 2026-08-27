@@ -13,7 +13,8 @@ function getComputerChoice(){
 
 function getHumanChoice(){
     let humanChoice = prompt("Enter rock, paper or scissor", "");
-    return humanChoice;
+        return humanChoice;
+   
 }
 
 let humanScore = 0

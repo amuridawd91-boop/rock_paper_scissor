@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function maxChar(str){
+            const charMap = {};
+            let max = 0;
+            let maxChar = '';
+            for (const char of str){
+                charMap[char]= charMap[char] +1 || 1;
+                
+            }
+            
+            for (let key in charMap){
+                if (charMap[key]> max){
+                        max = charMap[key];
+                        maxChar = key;
+                }
+            }  
+            return maxChar;    
+         }
+        console.log(maxChar("absssssdccc"));
+
+
+         function chunk(array, size){
+            let index = 0;
+            const result = [];
+            while(index < array.length){
+                result.push(array.slice(index, index+size));
+                index += size;
+            }
+            return result;
+         }
+         console.log(chunk([1,2,3,4,5,6,7,8,9], 3));
+    </script>
+</body>
+</html>
